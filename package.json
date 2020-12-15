@@ -19,7 +19,7 @@
   "author": "toteach.io",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/toteach/svg-sprite-loader.git"
+    "url": "git+https://github.com/toteach-tech/svg-sprite-loader.git"
   },
   "main": "lib/loader.js",
   "files": [
