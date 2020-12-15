@@ -1,0 +1,19 @@
+---
+engines:
+  nodesecurity:
+    enabled: true
+  fixme:
+    enabled: true
+  eslint:
+    enabled: true
+
+ratings:
+  paths:
+  - lib/
+  - runtime/
+  - scripts/
+
+exclude_paths:
+- examples/
+- env/
+- test/
