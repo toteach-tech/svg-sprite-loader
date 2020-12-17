@@ -14,7 +14,9 @@
     "webpack plugin"
   ],
   "homepage": "https://github.com/toteach/svg-sprite-loader#readme",
-  "bugs": "https://github.com/toteach/svg-sprite-loader/issues",
+  "bugs": {
+    "url": "https://github.com/toteach/svg-sprite-loader/issues"
+  },
   "license": "MIT",
   "author": "toteach.io",
   "repository": {
@@ -94,7 +96,9 @@
       "config": ".cz-config.js"
     }
   },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "bootstrap": "node scripts/bootstrap",
     "build:examples": "yarn env webpack-3 && yarn run build:runtime && node scripts/build-examples-dll && node scripts/build-examples",
@@ -114,5 +118,10 @@
     "test:webpack-3": "yarn env webpack-3 && yarn test",
     "test:webpack-4": "yarn env webpack-4 && yarn test",
     "upload-coverage": "codeclimate-test-reporter < coverage/lcov.info"
+  },
+  "directories": {
+    "example": "examples",
+    "lib": "lib",
+    "test": "test"
   }
 }

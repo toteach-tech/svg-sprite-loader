@@ -4,9 +4,10 @@ on:
   push:
     branches:
       - master
+      - main
 
 jobs:
-  publish-to-gpr:
+  publish:
     runs-on: ubuntu-latest
     steps:
 
@@ -22,10 +23,12 @@ jobs:
           npm version patch
 
       # Publish to NPMJS
-      - uses: actions/setup-node@master
+      - uses: actions/setup-node@v1
         with:
           node-version: 12
-          registry-url: 'https://registry.npmjs.org/'
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NODE_AUTH_TOKEN }}
 
       # Publish to GitHub Package Registry
       - uses: actions/setup-node@master
